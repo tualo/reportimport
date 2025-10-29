@@ -1,4 +1,5 @@
 <?php
+
 namespace Tualo\Office\ReportImport\Routes;
 
 use Tualo\Office\Basic\TualoApplication as App;
@@ -6,15 +7,12 @@ use Tualo\Office\Basic\Route as BasicRoute;
 use Tualo\Office\Basic\IRoute;
 
 
-class Upload implements IRoute{
+class Upload extends \Tualo\Office\Basic\RouteWrapper
+{
 
-    public static function register(){
+    public static function register()
+    {
 
-        BasicRoute::add('/reportimport/upload',function($matches){
-           
-        },[ 'get','post','put' ],true);
-        
+        BasicRoute::add('/reportimport/upload', function ($matches) {}, ['get', 'post', 'put'], true);
     }
-
-    
 }
